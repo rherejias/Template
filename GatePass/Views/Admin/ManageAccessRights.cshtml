@@ -1,0 +1,95 @@
+﻿
+@{
+    Layout = "~/Views/Shared/template/_Layout.cshtml";
+}
+@section content {
+    <div class="row">
+        <div class="col-md-2">
+            <div class="panel panel-info">
+                <div class="panel-heading clearfix">
+                    <h4 class="panel-title">Add User</h4>
+                </div>
+                <div class="panel-body">
+                    <br />
+                    <form>
+                        <div class="form-group">
+                            <label for="txtUsername">Username</label>
+                            <input type="email" class="form-control" id="txtUsername" placeholder="jdelacruz">
+                        </div>
+                        <button type="button" class="btn btn-info" id="cmdValidate">Validate to AD Server</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="panel panel-info">
+                <div class="panel-heading clearfix">
+                    <h4 class="panel-title">Add Department</h4>
+                </div>
+                <div class="panel-body">
+                    <br />
+                    <form>
+                        <div class="form-group">
+                            <label for="txtDepartmentName">Name</label>
+                            <input type="email" class="form-control" id="txtDepartmentName" placeholder="Human Resource">
+                        </div>
+                        <button type="button" class="btn btn-info" id="cmdSubmitDept">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="panel panel-primary">
+                <div class="panel-heading clearfix">
+                    <h3 class="panel-title">Manage access rights for</h3>
+                </div>
+                <div class="panel-body">
+                    <br />
+                    <div role="tabpanel">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-pills" role="tablist">
+                            <li role="presentation" class="active"><a href="#departments" role="tab" data-toggle="tab">Departments</a></li>
+                            <li role="presentation"><a href="#users" role="tab" data-toggle="tab">Users</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active fade in" id="departments">
+                                <p>
+                                    Bacon ipsum dolor amet turducken bresaola prosciutto drumstick hamburger, cow sirloin cupim pastrami landjaeger bacon. Jowl shank venison, pork belly tongue kielbasa capicola. Ribeye cupim pastrami, frankfurter picanha shoulder prosciutto pork belly leberkas meatball. Picanha pancetta capicola corned beef pastrami. Kevin sausage chicken shankle venison brisket jowl turducken andouille shank porchetta t-bone shoulder. Shankle tri-tip turkey kielbasa ball tip rump hamburger.
+                                </p>
+
+                                <p>
+                                    Pork chop drumstick t-bone tenderloin, andouille meatball filet mignon fatback jowl short loin short ribs shankle beef. Pork meatball chuck, turducken ball tip prosciutto pig strip steak ham hock cupim. Pancetta short ribs spare ribs tenderloin, meatball short loin ribeye. Alcatra flank brisket, chuck turkey jerky leberkas boudin tongue. Tail andouille chuck, tenderloin shank frankfurter meatball t-bone ham hock corned beef pancetta boudin. Chuck flank short ribs jowl ribeye ham pig chicken pork loin leberkas turkey venison swine. Prosciutto short ribs shoulder tongue hamburger turkey meatball capicola bresaola sausage ground round.
+                                </p>
+
+                                <p>
+                                    Shoulder doner jowl tongue tenderloin. Ball tip pancetta spare ribs turkey porchetta. Pig sausage jowl tongue bresaola, alcatra spare ribs andouille. Flank swine leberkas jerky boudin ball tip, shankle beef ribs hamburger pork chop.
+                                </p>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="users">
+                                <p>
+                                    <div class="jqxgrid jqxgrid-filterable jqxgrid-sortable" grid-selection-mode="singlerow" id="gridUsers" data-url="/users/GetRegisteredUsers" data-tree-url="/modules/getmodules"></div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="panel panel-success">
+                <div class="panel-heading clearfix">
+                    <h4 class="panel-title">Available Modules</h4>
+                </div>
+                <div class="panel-body tree-container">
+                    <div id="treeModules" data-url="/modules/getmodules" data-wtf="hello world"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@section JavaScript {
+    <script src="~/Scripts/pages/admin/accessRights.js"></script>
+}

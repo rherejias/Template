@@ -1,0 +1,155 @@
+﻿
+@{
+    Layout = "~/Views/Shared/template/_Layout.cshtml";
+}
+@section content {
+<div class="row">
+    <div class="col-md-12">
+        <div role="tabpanel">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#tab1" role="tab" data-toggle="tab">Item</a></li>
+                <li role="presentation"><a href="#tab2" role="tab" data-toggle="tab">Item Category</a></li>
+                <li role="presentation"><a href="#tab3" role="tab" data-toggle="tab">Item Type</a></li>
+                <li role="presentation"><a href="#tab4" role="tab" data-toggle="tab">Unit of Measure</a></li>
+                <li role="presentation"><a href="#tab5" role="tab" data-toggle="tab">Item Department</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="tab1">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title" id="titleView"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Item</h3>
+                            <button id="btnSupplier" class="btn btn-success" style="float:right; top:-8px; position:relative; box-shadow:3px 3px 1px #168572;"><i class="fa fa-plus" aria-hidden="true"></i> Create New</button>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <br />
+                                    <div class="jqxgrid jqxgrid-autoheight jqxgrid-enablehover jqxgrid-enableellipsis jqxgrid-pageable jqxgrid-virtualmode jqxgrid-pagesizeoptions jqxgrid-showstatusbar jqxgrid-toolbar jqxgrid-columnsresize"
+                                         id="ItemGrid"
+                                         grid-width="100"
+                                         data-url="/Items/GetItems"
+                                         grid-pagesizeoptions="10,20,50,100"
+                                         grid-selection-mode="singlerow"
+                                         grid-hide-columns="0,8,9"
+                                         data-action-buttons="Inactive"
+                                         data-statusbar-buttons="Export to Excel"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="tab2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title" id="titleView"><i class="fa fa-sitemap" aria-hidden="true"></i> Category</h3>
+                            <button id="btnCategory" class="btn btn-success" style="float:right; top:-8px; position:relative; box-shadow:3px 3px 1px #168572;"><i class="fa fa-plus" aria-hidden="true"></i> Create New</button>
+                        </div>
+                        <div class="panel-body">
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <br />
+                                        <div class="jqxgrid jqxgrid-autoheight jqxgrid-enablehover jqxgrid-enableellipsis jqxgrid-pageable jqxgrid-virtualmode jqxgrid-pagesizeoptions jqxgrid-showstatusbar jqxgrid-toolbar jqxgrid-columnsresize"
+                                             id="CategoryGrid"
+                                             grid-width="100"
+                                             data-url="/Items/GetItemCategories"
+                                             grid-pagesizeoptions="10,20,50,100"
+                                             grid-selection-mode="singlerow"
+                                             grid-hide-columns="0,1,4"
+                                             data-action-buttons="Inactive"
+                                             data-statusbar-buttons="Export to Excel"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="tab3">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title" id="titleView"><i class="fa fa-th-large" aria-hidden="true"></i> Type</h3>
+                            <button id="btnType" class="btn btn-success" style="float:right; top:-8px; position:relative; box-shadow:3px 3px 1px #168572;"><i class="fa fa-plus" aria-hidden="true"></i> Create New</button>
+                        </div>
+                        <div class="panel-body">
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <br />
+                                        <div class="jqxgrid jqxgrid-autoheight jqxgrid-enablehover jqxgrid-enableellipsis jqxgrid-pageable jqxgrid-virtualmode jqxgrid-pagesizeoptions jqxgrid-showstatusbar jqxgrid-toolbar jqxgrid-columnsresize"
+                                             id="TypeGrid"
+                                             grid-width="100"
+                                             data-url="/Items/GetItemTypes"
+                                             grid-pagesizeoptions="10,20,50,100"
+                                             grid-selection-mode="singlerow"
+                                             grid-hide-columns="0,1,4"
+                                             data-action-buttons="Inactive"
+                                             data-statusbar-buttons="Export to Excel"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="tab4">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title" id="titleView"><i class="fa fa-pie-chart" aria-hidden="true"></i> Unit of Measure</h3>
+                            <button id="btnMeasure" class="btn btn-success" style="float:right; top:-8px; position:relative; box-shadow:3px 3px 1px #168572;"><i class="fa fa-plus" aria-hidden="true"></i> Create New</button>
+                        </div>
+                        <div class="panel-body">
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <br />
+                                        <div class="jqxgrid jqxgrid-autoheight jqxgrid-enablehover jqxgrid-enableellipsis jqxgrid-pageable jqxgrid-virtualmode jqxgrid-pagesizeoptions jqxgrid-showstatusbar jqxgrid-toolbar jqxgrid-columnsresize"
+                                             id="MeasureGrid"
+                                             grid-width="100"
+                                             data-url="/Items/GetUnitOfMeasures"
+                                             grid-pagesizeoptions="10,20,50,100"
+                                             grid-selection-mode="singlerow"
+                                             grid-hide-columns="0,1,4"
+                                             data-action-buttons="Inactive"
+                                             data-statusbar-buttons="Export to Excel"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="tab5">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title" id="titleView"><i class="fa fa-institution"aria-hidden="true"></i> Item Department</h3>
+                            <button id="btnDept" class="btn btn-success" style="float:right; top:-8px; position:relative; box-shadow:3px 3px 1px #168572;"><i class="fa fa-plus" aria-hidden="true"></i> Create New</button>
+                        </div>
+                        <div class="panel-body">
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <br />
+                                        <div class="jqxgrid jqxgrid-autoheight jqxgrid-enablehover jqxgrid-enableellipsis jqxgrid-pageable jqxgrid-virtualmode jqxgrid-pagesizeoptions jqxgrid-showstatusbar jqxgrid-toolbar jqxgrid-columnsresize"
+                                             id="DepartmentGrid"
+                                             grid-width="100"
+                                             data-url="/Items/GetItemDepartment"
+                                             grid-pagesizeoptions="10,20,50,100"
+                                             grid-selection-mode="singlerow"
+                                             grid-hide-columns="0,1,4"
+                                             data-action-buttons="Inactive"
+                                             data-statusbar-buttons="Export to Excel"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@section JavaScript {
+<script src="~/Scripts/pages/Items.js"></script>
+}
